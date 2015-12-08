@@ -14,7 +14,6 @@ RUN mkdir -p /opt/app
 WORKDIR /opt/app
 
 # config
-ENV NODE_ENV prod
 ENV NPM_TOKEN 00000000-0000-0000-0000-000000000000
 
 # install
@@ -29,6 +28,10 @@ RUN apk del make gcc g++ python && \
 EXPOSE 3000
 CMD npm start
 ```
+
+## Development
+
+    $ make
 
 ## License
 
