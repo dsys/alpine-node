@@ -1,20 +1,17 @@
 # private-npm
 
-Base Dockerfile for private NPM modules.
+Base Dockerfile for NPM modules.
 
 ## Usage
 
-Available on Docker Hub as [pavlov/private-npm](https://hub.docker.com/r/pavlov/private-npm).
+Available on Docker Hub as [pavlov/alpine-node](https://hub.docker.com/r/pavlov/alpine-node).
 
 ```dockerfile
-FROM pavlov/private-npm:latest
+FROM pavlov/alpine-node:latest
 MAINTAINER Laika <laika@pavlovml.com>
 
 RUN mkdir -p /opt/app
 WORKDIR /opt/app
-
-# config
-ENV NPM_TOKEN 00000000-0000-0000-0000-000000000000
 
 # install
 COPY . ./
@@ -35,4 +32,4 @@ CMD npm start
 
 ## License
 
-[BSD 3-Clause](https://github.com/pavlovml/private-npm/blob/master/LICENSE)
+[BSD 3-Clause](https://github.com/pavlovml/alpine-node/blob/master/LICENSE)

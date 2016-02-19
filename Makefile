@@ -1,4 +1,4 @@
 .PHONY: build
 
 build:
-	docker build -t pavlov/private-npm .
+	docker build -t pavlov/alpine-node .
