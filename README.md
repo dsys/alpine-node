@@ -1,4 +1,4 @@
-# private-npm
+# alpine-node
 
 Base Dockerfile for NPM modules.
 
