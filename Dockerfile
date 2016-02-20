@@ -1,4 +1,4 @@
-FROM gliderlabs/alpine:latest
+FROM gliderlabs/alpine:edge
 MAINTAINER Alex Kern <alex@pavlovml.com>
 
 ENV NODE_VERSION 5.6.0
