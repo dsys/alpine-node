@@ -1,8 +1,8 @@
 FROM gliderlabs/alpine:latest
 MAINTAINER Alex Kern <alex@pavlovml.com>
 
-ARG NODE_VERSION=5.6.0
-ARG NPM_VERSION=3
+ENV NODE_VERSION 5.6.0
+ENV NPM_VERSION 3
 
 RUN apk add --no-cache git curl make gcc g++ binutils-gold python linux-headers paxctl libgcc libstdc++ && \
   curl -sSL https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}.tar.gz | tar -xz && \
