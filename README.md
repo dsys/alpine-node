@@ -10,20 +10,22 @@ Available on Docker Hub as [pavlov/alpine-node](https://hub.docker.com/r/pavlov/
 FROM pavlov/alpine-node:latest
 MAINTAINER Laika <laika@pavlovml.com>
 
-RUN mkdir -p /opt/app
-WORKDIR /opt/app
+# deps
+RUN apk --update add gcc g++ python
 
 # install
+RUN mkdir -p /opt/app
+WORKDIR /opt/app
 COPY . ./
 RUN npm install
 
-# cleanup (necessary, unfortunately)
-RUN apk del make gcc g++ python && \
+# clean up
+RUN apk del gcc g++ python && \
     rm -rf /tmp/* /var/cache/apk/* /root/.npm /root/.npmrc /root/.node-gyp
 
 # run
-EXPOSE 3000
-CMD npm start
+EXPOSE 80
+CMD [ "npm", "start" ]
 ```
 
 ## Development
